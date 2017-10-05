@@ -232,6 +232,7 @@
               scaleControl: _this4.props.scaleControl,
               streetViewControl: _this4.props.streetViewControl,
               panControl: _this4.props.panControl,
+              fullscreenControl: _this4.props.fullscreenControl,
               rotateControl: _this4.props.rotateControl,
               scrollwheel: _this4.props.scrollwheel,
               draggable: _this4.props.draggable,
@@ -242,7 +243,7 @@
             });
 
             Object.keys(mapConfig).forEach(function (key) {
-              if (!mapConfig[key]) {
+              if (mapConfig[key] === null) {
                 delete mapConfig[key];
               }
             });
@@ -372,6 +373,7 @@
     scaleControl: _react.PropTypes.bool,
     streetViewControl: _react.PropTypes.bool,
     panControl: _react.PropTypes.bool,
+    fullscreenControl:  _react.PropTypes.bool,
     rotateControl: _react.PropTypes.bool,
     scrollwheel: _react.PropTypes.bool,
     draggable: _react.PropTypes.bool,
